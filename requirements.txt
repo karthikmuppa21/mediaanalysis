@@ -1,0 +1,8 @@
+Flask
+flask-cors
+spacy
+vaderSentiment
+langdetect
+matplotlib
+seaborn
+

@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request , render_template
 from flask_cors import CORS  # To handle CORS issues
 import re
 import spacy
@@ -74,6 +74,11 @@ def generate_comment_length_plot(comment_lengths):
     plt.close()
     
     return img_base64
+
+
+@app.route('/', methods=['GET'])
+def home():
+    return render_template('index.html')
 
 @app.route('/analyze', methods=['POST'])
 def analyze_comments():
