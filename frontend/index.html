@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Comment Analysis</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<header>
+    <h1>YouTube Comment Analysis Dashboard</h1>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about-us">About Us</a></li>
+            <li><a href="#contact-us">Contact Us</a></li>
+            <li><a href="#need-help">Need Help?</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Home Section -->
+<section id="home">
+    <p>Welcome to the YouTube Comment Analysis Dashboard. Use this tool to analyze comments from any YouTube video.</p>
+</section>
+
+<!-- Analyze Comments Section (Main Content) -->
+<section id="analyze-comments">
+    <h1>Analyze Comments</h1>
+    <div class="input-form">
+        <input type="text" id="videoId" placeholder="Enter YouTube Video ID" required>
+        <input type="text" id="apiKey" placeholder="Enter API Key" required>
+        <button id="fetchComments">Analyze Comments</button>
+    </div>
+    <div id="labels" class="sentiment-labels">
+        <p><strong>Total Comments:</strong> 0</p>
+        <p><strong>Fetched Comments:</strong> 0</p>
+        <p><strong>Positive Comments:</strong> 0</p>
+        <p><strong>Negative Comments:</strong> 0</p>
+        <p><strong>Neutral Comments:</strong> 0</p>
+    </div>
+    <div id="charts"></div>
+</section>
+
+<!-- About Us Section -->
+<section id="about-us">
+    <h2>About Us</h2>
+    <p>Welcome to YouTube Comment Analysis, your go-to platform for understanding and analyzing YouTube comments through advanced sentiment analysis and data-driven insights.</p>
+
+    <p>Our mission is to empower content creators, brands, and researchers by providing them with powerful tools to evaluate the sentiment, engagement, and trends within the YouTube community. Whether you’re looking to analyze viewer feedback, detect query-based interactions, or explore the sentiment distribution of your audience, our platform offers a comprehensive suite of features to help you gain valuable insights.</p>
+
+    <h3>What We Do</h3>
+    <p>At YouTube Comment Analysis, we leverage state-of-the-art natural language processing (NLP) and machine learning algorithms to bring you accurate and actionable results. Our website provides a user-friendly interface where you can:</p>
+    <ul>
+        <li><strong>Analyze Comment Sentiment:</strong> Understand the emotions behind your audience's comments, including positive, negative, and neutral sentiments.</li>
+        <li><strong>Detect Queries:</strong> Identify questions and queries within comments to improve engagement and address user concerns.</li>
+        <li><strong>Assess Comment Length:</strong> Gain insights into the length of comments and how that correlates with engagement.</li>
+        <li><strong>Multilingual Support:</strong> Our tool can detect and analyze comments in multiple languages, ensuring that you can analyze a global audience.</li>
+    </ul>
+
+    <h3>Why Choose Us?</h3>
+    <ul>
+        <li><strong>Easy to Use:</strong> Our intuitive interface ensures that anyone, regardless of technical expertise, can use our platform effectively.</li>
+        <li><strong>Real-time Data:</strong> Get instant insights and make data-driven decisions to enhance your YouTube channel.</li>
+        <li><strong>Comprehensive Insights:</strong> With sentiment analysis, query detection, and comment length evaluation, you get a 360-degree view of your audience's feedback.</li>
+        <li><strong>Data Visualization:</strong> Visualize your comment data through charts and graphs to easily interpret and share results.</li>
+    </ul>
+
+    <p>We believe that understanding your audience is key to success in the digital world. Let us help you unlock the power of YouTube comments and take your content strategy to the next level.</p>
+    <p>Feel free to explore our platform and begin analyzing your YouTube comments today!</p>
+</section>
+
+<!-- Need Help Section -->
+<section id="need-help">
+    <h2>Need Help?</h2>
+    <p>If you're unsure how to get the YouTube Video ID or API Key, follow these simple steps:</p>
+
+    <h3>1. How to Get the YouTube Video ID</h3>
+    <p>The YouTube Video ID is a unique identifier for each video on YouTube. Here's how you can find it:</p>
+    <ol>
+        <li>Go to the YouTube video you want to analyze.</li>
+        <li>Look at the URL of the video. For example, in the URL <code>https://www.youtube.com/watch?v=dQw4w9WgXcQ</code>, the part after <code>?v=</code> is the Video ID.</li>
+        <li>In this case, <strong>dQw4w9WgXcQ</strong> is the Video ID.</li>
+    </ol>
+
+    <h3>2. How to Get Your YouTube API Key</h3>
+    <p>To interact with YouTube's API and fetch data such as video comments, you need an API Key. Here's how you can get it:</p>
+    <ol>
+        <li>Go to the <a href="https://console.developers.google.com/" target="_blank">Google Developer Console</a>.</li>
+        <li>If you don’t have an account, sign up. If you already have one, sign in.</li>
+        <li>Create a new project by clicking on the <strong>Create Project</strong> button at the top of the page.</li>
+        <li>Give your project a name and click <strong>Create</strong>.</li>
+        <li>Once your project is created, click on the <strong>Navigation Menu</strong> on the left side, then go to <strong>APIs & Services</strong> > <strong>Library</strong>.</li>
+        <li>Search for the <strong>YouTube Data API v3</strong> and click on it.</li>
+        <li>Click <strong>Enable</strong> to enable the YouTube Data API for your project.</li>
+        <li>After enabling the API, go to <strong>Credentials</strong> from the left menu.</li>
+        <li>Click on the <strong>Create Credentials</strong> button and select <strong>API Key</strong>.</li>
+        <li>Your new API Key will appear. You can copy it and use it in the tool.</li>
+    </ol>
+
+    <p>Now you have both your YouTube Video ID and API Key! You can paste these into the fields above to start analyzing your video comments.</p>
+
+    <p>If you need further assistance, feel free to <a href="#contact-us">contact us</a>.</p>
+</section>
+
+<!-- Contact Us Section -->
+<section id="contact-us">
+    <h2>Contact Us</h2>
+    <p>For inquiries, please contact us at: support@youtubeanalysis.com</p>
+
+    <!-- Find Us At Section -->
+    <p>Find us at:</p>
+    <div class="social-media">
+        <a href="https://www.facebook.com/YourPage" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" class="social-icon">
+        </a>
+        <a href="https://twitter.com/YourProfile" target="_blank">
+            <img src="https://sweetwaternow.nyc3.cdn.digitaloceanspaces.com/wp-content/uploads/2024/01/Depositphotos_676194222_XL-scaled.jpg" alt="Twitter" class="social-icon">
+        </a>
+        <a href="https://www.instagram.com/YourProfile" target="_blank">
+            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAMAAzAMBEQACEQEDEQH/xAAcAAAABwEBAAAAAAAAAAAAAAAAAQIDBAYHBQj/xABOEAABAwMABQYHCwgIBwAAAAABAAIDBAURBgcSITETQVFhcZEiMoGhssHRFBYzNkJScpKx4eIjRFRVY5OkwhVDU2JlgqKjFyQmNDVkc//EABsBAAEFAQEAAAAAAAAAAAAAAAIAAQMEBQYH/8QAPBEAAgEDAQMGCgoCAwAAAAAAAAECAwQRBRIhMQZBUaGx4RMVIlJhcYGRwdEUFjI1QlNiY6LwNIIzQ/H/2gAMAwEAAhEDEQA/ANxPBIRy77e6OxUD6yvk2WDc1o8Z56AFPbW1S5qeDpoOnTdR4iYppVpdc9I5nNle6ChHiUzDu48XfOPm6F29hptC0Sa3y6fl0GtSt4010vpK7haeSbZzxDwhJFEUAhySqIoBA2SKIoBC2SqIoBA2SKIsBC2SpBgIWyRRFAIWyRRFAIWyWMRWEGSVRFAIWyRRDwgySJCkwQEhwJCAkMEmyPgCbIhynnlppWzU8j45G72uY7BCCcYyWJLcR1acKkdmayvSaXofpt7teyhuzg2pO5k3ASHr6CsO7sdjy6fDoOP1TRPBJ1bf7POuj1dJeWrMObFJDjNTUR0tPLUTvDIo2lzj0AIoQlOSjHix4ptpIwLSzSCfSO6vqpS5tO3waeIndGzp7TxP3Bd5p9nCzpKEeL4v+83QdBQt1Rgo85xMK/km2A9lDkJQFbKZskUAwEOSRQFY3oGyRRFAIWw1EUAhbJVEUAhbJFEMBDklURQCHJIohgIMkiiLAQtkiiKCHJIlgCQgJCCTZEBNkcCbIgkORATZHAmyIA4oWxmatq80jNzpDQVjy6qgHgvcd8jOvrHBYd7b+Dltx4M4fXNOVvPw0F5L5uh/Jl0bwVAwDPNbV4MNFDaYXYfUHblwfkDgPKfsW9oVspVHWlzcPWaumW+1J1HzcDKcLqsm3sB4TZC2A9lNkJQDwhbD2BQYmbDUCRR0NTWyiOjp5JnngI2FyiqVoU1mbwhTlCmszeCyUOr7SCqa1z4IqYH+2k9QBWdPV7aPPn1FKerWsN2c+o6sOq6vIBmuNMw9DGOcPUqstbhzQZA9dpL7MGShqsfz3ho7Kb8Sj8efo6+4H6wL8vr7hQ1WnnvP8J+ND47/AEdfcEuUSX/V19wY1W/4x/CfjTeOn5nX3D/WNflfy7gxqv8A8Y/hfxpvHP6OvuDXKVflfy7g/wDhh/jH8L+NN44/R19w/wBZ/wBr+XcD/hgf1z/C/jS8cfo6+4X1n/a/l3BHVg7mvH8L+NLxx+jr7hfWf9rr7ht+rGcfB3WM/SgI/mKdauvM6wlymhz037+4hVGre8RhxgnpJRzDac0nzY86OOq0nxTLFPlHav7UWvYn8fgcO46MXm3AuqaCXYHFzPDHeFYp3dGpwZo0NTta+6E1no4dpyCCCQRgjiFNk0chJsjhIciAmyOBNkRNs1wktVzp62InMT8uA+U3nHcoqsFUg4srXltG5oypS5zeaSZlRTxzRkOZI0OaR0Fc804vDPMZwcJOL4oxHWBVmu0srjtBzISIG7uGzxHeSuy0un4O1j6d/v7jqdOobFvH07yu7J6FoZL+yGGptofYD2U20GoCmsJOMZKFyD2FwNA0T1fPqmNrL2HxRneymBw5w6XHm7FhXmrbD2KHvMK91ZQexQ9/yNHo6GmoIWw0dPHDG0YDWNwsCpUnVeZvLOeqVZ1HmbySWkYQAB5CQgZSEGkICQgJCAkICQgspCBkJCBkJCEnBSGK/ftELbeGF5iFPUc00QwfKOdWaN1Upbk9xqWWrXNq0k8x6GZTfbHW2SqMNbHuO+OVvivHV19S2KVeFZZR29jf0ryG1T9q6DmKXJfCyhyIGU2RwJZGe82XVxXe69FacOdl9O50J6sbx5iFi3UNmp6zz7XaPg72TXCW/wDvtyZDdn8tdq6Y/wBZUSO73ErsKHk0ox6EjpLenilBehdhEwpMlhQD2U2Q9gMBM3uH2Nxo2rrRRrmNvFwYDnfTRu9I+pYOqX0s+Bpv1nN6zqDTdvSeOn5GjjwdxWEc2QLveKC0wctXztjB8VvFzuwc6lo0KlaWzBZLFtaVrmWzSWfgUm4aycOLbdRAt+fKfUFqUtJzvmzorfk1lZrT9xxpNP77IMcpTs+hF7SrS0ygun3mjHk/ZR5m/aR3aa6QHhX7PZG32KRadbL8JMtEsV+DrYj35aRfrOT6jPYn+gW3m9oXiax/L638we/LSH9ZyfUZ7EvoFv5ovE1j+X1v5g9+WkP6zk/ds9iX0C380Xiax/L638we/LSH9Zyfu2exM7C383tH8TWP5fW/mEdMtIf1nJ+7Z7EP0G383tF4msfy+t/MMaa6Qg/+Rce2NvsQuxt/NGei2L/6+t/Mdj07v7Dk1LH/AEowo3Y0OZEb0Gyf4X7ybS6x7tG7/mYKadvQAWn1qGWnU/wvBXqcm7aS8htdZabLp7a7g5sVVmjmduHKeL3qlVs6kN63oxLvQLmgnKHlL0cS2iRpAxvz0KmYbWOJBvVpp7xQSUlWwOa4eCedh6QjpzlTltIsWt1UtaqqU3/egxG+Wyez3GWiqfGYctd89vMVtU6yqQTR6PZXULqjGrDn7Tno8lsCbIgJZEXLQy8m3WuWEEjanLv9LR6lRuIbUsnP6rZqvWUvR8WVKY7U0hPEuJ866eLwjRhDEUhGyn2g9gMNTbQSgdPRy2G7XqloznYe/wAMjmaN58wVa6r+CoykVb6ura3lV6OHrN0hYyGNscbdljQA0DmC5Btt5Z51KTlJt8Tm6S3qGyWx9VIA5/ixR58Z3R2Ke2oOvU2Fw5y3Y2crysqceHP6DFrlX1Nzq31dZKZJnnieAHMB0BdRSpRpxUI8D0K3t4UKap01hIjKUsICQgJCAkICQgkzY4EGRBFDkQSBscPmygyLO/B07fo7eLlFytHQTSRHg84aD2Z4qvO5pQeHIpV9StaEtmpNJ+/sIlfQVlum5Gtgkgk6Hjj2HnSjUjNeSyajc0a8dunLKLdq/wBK5KSaK1XCQupXnZhe474jzDs+xUru3UltxMDXNKjODuKS8rn9PpNT2srMONKTrPtDamzi4xt/K0pG1jnYTjzHCt2tRxns8zOh5PXbpXDovhLtMoWjk7kJLI+AJsjnRt0hZA4D53qCinxKdxFORFcMvcesreySRisILCWQsBjimyJovuqei5Ssr65w+DY2JnlOT9g71kavU3RgcvykrYpwpLn3+7/00ojCwzkTJtZdyNVfBRhxMdK3BH947z6l0GmU1CltdJ2/J618HbeEfGRUFpbRvpBpbQ4E+RASyICWRATNg5C3dIQtjhIWLISBjoCBsI7mhdqiu+kEFPUDagYDLI35wHN34VS6qunTyuJl6vdStrWU48XuXtNtZG1jQ1oAaBgADgsJvPE86y28tnI0otEF3s9RDO0F7Gl8b8b2uHAhSUqjpzyi9p11O1uIyi9z3MwsEtPOHA8QeBW1nKPS9lNG6aJ3A3XR+jq3HMhZsv3fKacFYtWOzNo801K2+j3U6fN8zo3CkjraGopZd8c8bo3Y44Iwgi8PJVo1JUqkakeKeTz1LG6GR8cgw9ji1w6CNxWspZWT1WElNKS4CE+QwJsiJdK7EZ7UEmQ1VliCcklbzkPgLKByEFlDtCaNY1VxbGj8r/7Soce4AepYWpSzW9hxHKOWbtLoRcncyzznmYLf5nT3y4SudtF1Q/eejaIHmwulovZpRXoPT7GChbU4roXYQFJtloCW2ICfbEAZJwAn292QclrsGgtyuQZNVkUdMd+XjL3DqbzeVUq2owp7o72Yd7r1ChmFPypdXvLtbtBbHRgcpA+qf86d2c+QbvMs6pf158+DnK+uXlXhLZXoOxHYrTG0NZbqZoHMIwq7r1X+JlKV9cyeXUfvGKrRax1QIlttPk8XNZsnvCJXNZfiZJT1O8pvKqMrF51bUr2l9oqXwybzycx2mHqB4jzq3T1GS3VFuNm15SVIvFxHK6Vx93DsKBd7PXWifka+B0ZPiu4td2FX6daNRZizqLW9o3Udqk89vuH9F7v/AEJeoa0tLohlkrRxLTx9vkUdxBVINEWo2n0y3lS5+K9ZttHWwVtOyekmjlieMhzTncsRxcXhnnFWlUpScJrDRwtMtI6a0WyaMSMfVzNLY4gd4zuyepS0aLnL0GlpWn1bqspY8lcWYsVqNnoxq2qeYvstTEXE8nUnA6AWj15WddLy8nD8poYuYy6V8WXk8FVOcMD0pi5DSO5R/wDsPd3nPrWjSeYI9O02W3Z036F1bjlI8l8CbIh+E+Ce1C2RT4gWw5iAgcxAQ7YjYdWjQNFICOJkkz9YrFvHmszgdf8A86XqXYWl3AqqYp54qX7dVM/50jj51vxluR6rSjswivQhvKfbJAZS2xBty5waASScAAbyn28At4WXwNT0L0NjoI46+5sD6xwBYx28Rfesy4u5TezHgcTq+sSrN0aLxHp6e4u2yANyonPCHyBjS5xDWjiXHCSWeAkm3hbznyaR2WNxY+7UQcDggTtOD3o1Sm+Ytx0+7lwpS9zJNJdKCtOKOuppz+yla7HcUzhNcURVbavS/wCSDXrTJQ8LjzISAiXS3UlzpXUtbC2WJ3Mebs60cJyg8onoXFS3nt03hmN6WaOTWCtDTtPpZPgpenqPWFrUK6qLfxO/0zUYXtPPCS4r+8xx4Kqoptr3NUSxB3Hk3lue5HKMXxRoyo06n24p+tDUkj5Hl8ji554ucck+VDuXAOMIpYSEIWwzS9T78xXRmeDo3d+17FSuuKOO5Ux8qk/X8DRTwVQ5RmGaeDZ0tuQ/aN9EK5SfkI9J0XfY036Pizgo8mrgCWRYHYj4J7UzZHLiGtJzGAgcxBEoXMc2TVr8UqXrfJ6ZWXcvNVnn2v8A+fP1LsLO84aT1KAx1xPOQJIytfbPWcYDym2xAyn2xF61ZWEVdTJdalmYoHbEIcNzn858m7v6lWuKu7ZRzHKK/dOKtoPfLe/V3mp7IwqOTjCuaWaUw6P0+yAJax4/JxZ4DpPQFLTpubNTTNLqX0s8IrizJrvfLjeJC6vqXvbndG04Y3sCvwjGC3Hc2thQtVinHf085zlJtF3Acb3xPEkbnMe05a5pwR5UtrPEGcVJYZdNFdPauimZT3d7qilO7leL4+s9IVWtQTW1E53UtBp1U526xLo5n8jVKeWOoiZLE8PjeA5rmncQqT3HFzhKEnGSw0Qb9aoLxbZqKoAAe3wXY3sdzEIoTcJZRPZ3c7Ssqsebr9BhFZTTUdVLS1LNiaJ5Y9vWFqxntLKPTqNSNWmqkeD3jCWSUCFiNG1O/CXbsh/nVK5e9HI8qeFL2/A0s8FWORMN1gfHC4/SZ6DVapvyEekaH930/b2sryds1gJZHFxncmyBJCsq65ggUbmOEh294jZ9WvxPo/pSem5UqrzNnnuv/eE/Z2Isz/FPYozHXE84t8UK5t7j1t8Q022MAZJw0ZJ3ABLb5wXuN70dt7bXZaOkbjLIhtEDi47ye9VpPLyeYX1d3FxOp0sfuldHbbdUVsx8CBheevHN5eCZLJFb0ZV60aUeLeDBrjXVFyrpqyqeXSyuyeocwHUFcjJJYR6dbW8LelGlDgiMi2ywBPtCAn2hA48U6kMaHqrvj+Wks1Q8lpBkgy7hji0fb3qtXX4jkuUlisK6j6n8H8PcaWN+9VjkjJ9a1uFPeIa2NuG1MeHYHym7vsx3K5bz8lo7bk3cOdvKk/w8Pb3lHVnJ0wSHI5o+pz4S7dkP86qXHE5HlTwpf7fA0tVzkDDdYHxwuX0meg1WYfZPSNC+76ft7WV1M2a4EORCmnclkZi1O5gAUbmICBzEbNqz+J1H9KT0yopPLPPeUH3hP2diLO/xT2FMYy4nnBvihLb3Hrr4hpbYxMssZmvNDHzOqGeYgpbeSteS2Leb9DPQYGAkeWFL1q1LoNG2RM/r6ljHdgBd9rQnTwzf5N01K9cn+GL+C+JkiLbO9AiUxARbQgIlIQESkI6mi9Q6l0jtszDjFSxpPUTsnzFNJ5TKOpU1UtKkfQ+pZXWje28NyqnmKKNrbjDrLTSc8c/2ghTUHiR0nJmeLmUelGUK1k7kJLIjR9Tvwl27If51Vr8TkeVXCl/t8DSjwUJyBh+sL44XH6TPQap4fZPSNC+76ft7WVxI1wkIgwnSEOKNzAAo3MQFG5iNn1Z/E2j+lJ6blJF5R57yg+8J+zsRZ3+Kewp3wMVcTzezxR2Kp4Q9dfEVhLwg2SZZZeQvNDKeDahmc9oCfwnArXkVO3qR9DPQYORuVs8sKVrWp3S6NMlaN0FSx7uwgt+1wQVHiOToOTVRRvHF86fwfwMlyolM70CNTEBGpiAj2xBFFtDHT0Xp3VWklshYMk1LHHsado+YFE5bilqVRU7OrJ9D69xvo4KI8wKLrbmDLLSxc8lR9gJR0+J0nJmGbmUuhGUKzk7kCfIjR9Tnwl27If51XrcTkeVXCl/t8DSjwURyBh+sL44XDtZ6DVYp/ZPSNC+76ft7WVxO0a4EsCDwlgZi1muYwYBKicxsh7CB1AWzZtWwxohRj+9J6ZVuhLahk8+1951Cfs7EWZ/insUr4GMjztEz8m3sCxvCHrMpeUxewm8IDtBOjPyTg8x6Cn8ILJu2jtxbc7JR1bSMvjG2B8lw3EeQ5WtSmpwTPM763dvczpvmfVzD91oWXK3VNFN8HPGWE9GRxRyipLBFb15UK0aseKeTBrjQT26umo6tmzNC7ZO7c4czh1FZzk4S2Wem29xCvSjVhwf9wRS3CNTLGQsFGpjhKRSHDUikNnBomquxScpJep2ENwY6fI458Z3q70aeTkeUt8mlawfpfwXxNKBwN+U5yJk+ta5Nqr1DQxuBFLHl+D8p3N3Y70cNx3HJq38Hbyqtb5cPUv71FIUqZ0oSLIjR9Tnwl27If51FV4nI8quFL/b4GlHgojkDD9YO/TC4/SZ6DVZpLyT0jQ/u+n7e1ldUmDWAlgQpo3JYGY6GLnZVCPI41igdQFsWGIHUA2jXtXPxUph0Pk9MrUsnmimcFrv+dL1LsLK/xSFbMhcTAGR4aBjgMLlvCHqO2K2EvCDbQOTS8IPtFx1c3gUNVLbKh+zDUO24ieDX8CPLu8o61o2FwlLwcnxOd1+z8LBXEFvjufq7viaZtBbByBXtLNFob9BttIirI2nk5unqd0hQVqCqL0mppupzspY4xfMZTd7LX2eUsuFM+JgOGy8WO/ze1Zs4zpvykdvaX1C6jmk8vo5/cc4tzwSjVXSXFJcBAYZJGxxNL5HHAYwZcewBTxmG5qKzLci56KaAVdbKyqvDHU9KN4hO57+3oHnVqEW+Jzmp6/SpxcLZ7UunmXq6TVYIo6eJkMTAyNgw1rRuAVg4mU5SblJ5bIN/u9PZrbNW1ByGDwWZwXu5gEm8FiztZ3dZUoc/UukwarqZayqmqqh+1NM8veespJnp9GlGlBU4Lctw0pEyUJGmI0fU58Jd+yH+dBUOR5VcKX+3wNLUZyBhun/xwuX0meg1W6X2T0jQ/u+n6n2sr6lNUCfAhyMbksAsltZ1LjJ1Cu5DjWKCVQFyFiNROoDtGq6uj/0zE3olk9IroNOeaCOI13/Mb9C7CzO4K6zHMNmi2Z5W44SOHnXHVMqTR6TCWYp+hCNhBkLaBsdSWRZBsHIIJBByCDgg9KJSxvGbyaNolpS2sjjork8NqhubIeEo9RXQWV9GpiE+JyOp6U6TdWivJ6OjuLcSCMdK0zDCdGHgteAWnmIymwJNp5RzJdGrJM8vltFC55OS73O3J8yjdGm9+yi7HUryKxGrLHrZKo7XQUP/AGVFTU4/YxNb9gRKEY8EQVbitW/5Jt+ttkrxT2oyEh3W6UlqpH1VdKIomDn4k9A6SmlJRW8mt7arc1FTpLLf93mMaWaR1GkVcHuBjpYsiGEnh1nrUG3k9C0zTadlTwt8nxf95jhjcNyNSNRAUikOBSpiNK1PNxFdH48Z8Tc9gd7U0nk47lS/KpL1/A0Y8EByZhmnR2tLbkf2gH+kK1S+yj0nRt1jT9XxZwVOjUDRoQ7F4vlTtEcuJ0WsXncp7yo5DgYonIBsUGIcgtmk6t5NqzTR/wBnOR3gH1ro9Klmi10M5HXo4uU+ldxanZ3YWmYhjl1p3Q3WticMFs7+4kkeYrjblbNaS9J39rUUqEJehEcMUG0TuQYjQ7Q20K5NNtA7QOS35RbfQNksFn0pr7eGxz/81COAecOb2O9q0rbVatPyZ+UusyrvSaFbyo+S+r3FqotL7VUgCSR1O/nbKMecblsUtTt6nF4fpMWtpNzT4LK9B0W3m2ubltdTkf8A0Csq5ovhJe8qO0uE8OD9wxUaR2enaTJXwbuZrto9wQyvKEeM0SQ0+6m8KDK5d9YETGuZaaV0r+aSfwWjrxxPmVSpqcOFNe817bQJSea8sLoW/r4dpQLvXV11qOXuFQ6V48UcGt7BzKv9IlN5kdRa21G2js0ljt95y3RlqswqIvRkNHPQrEZBgUqY4FMmI1XVJC5llq5S0jlKnA6wGjf35TvecNynmncwj0L4/wDhezwTHNmBaUT+6NI7lJjGah7e449St01hHp2mw2LOnH0Lr3nMU6L4FIhh+EeCe1EyOfE6wavMpcWUMjgagyC2LDMJk94LZcdXVRydXWUrjjlGNkb5Nx+0LZ0ar5UqftOe12nmEKi5t3vL0TnnXQHNegzzTagNPdzUgeBUNB3dI3Fcxq9LYrbfMzq9HuNuhsc8TgiNYzZq7QsRpsg7QfJpbQ20HyfUm2hbQXJpbQtoSY0W0PlCDF1J1MLaG3R70angNSGnxKVVGGpEd8XUrEKhLGZGli6lchVJozIksRV2nVJ4yI+COKtxnklTAMk4Ayegc5U8WM3g3fRG2f0To/R0rvhAzaf9I7z9qkR5lqVz9Jup1Fwb3ew6Nwqo6KgqauX4OCN0juwDKSK1GlKtUjTjxk8e888ySOlkdJIcve4uceknirkT1SMVFKK4LcEpYhgUsREqlbmM9qJkFR4Z2QzBI615hU3NmfncLa1R5BbHAxA2C2TrPVm3XKnqhnDHYcOlp3FWLS48DWjMq3dHw9GVPpNUhc2RjZGHLXDIPSF2qknvRxDTTaZDvVtiudGYJNzh4THfNKrXdtG4pODLFrcyt6m2jPKqimo6h0FQwtkHcesdIXF3FKdCbhNYZ1dKvGrBTg8obDFXbD2hXJoci2g9hLaGyDk0+R9oSWJ9ofaEGPqTqQ+0IdGiUg1IafGjTDUhh8aljMkUiPJH1KzCoSxkRJYlcp1CxGRCmZgnmHWr1OoTQnncXLQDRJ9VURXa4s2aZhzBG4b5XfOx0dHT2cdGlmSyzndc1eNODt6T8p8X0ej19PQapgAKc4spGtG8CmtDbbG78rVnwhzhgOfOdyKPE6Pk5ZurceGfCPazKFZizugKVMQamiMT7fGXQuI+d6gikyrXliR3qyHkq2ojx8HK5uOwkLzG48mrNel9pmUp7VOL6UhLWqs2O2ONahyC2ONZ5EyYEmW3RO8CJjbfVOwBuiefsK6DStQSxRqP1GDqdo2/DQXrLaBniuhMMjV9BTV0exURBwHA847Coa9tSrx2aiyS0q9SjLagzgVOinE0tQAPmyD1rDraBF76UvealPVnwnEhO0buA4Nid2PVB6HdroLK1Og+kQbBcB+b5/zhRPR7zzesLxjQ84SbFcf0V31h7UHiq9/L618wvp9Dzu0T/QVx/RHfWHtT+Kr3zOtfMf6fQ84I2G5forvrD2peK738vs+Y/wBPt/OEGwXI/mjvrN9qLxXefl9a+Y6v7fzu0Q7R65nhSO+s32olpd55nWvmGtQtl+LtGzo3dXbhSH6w9qkjpd3zw60F4ztvOEnRK7POOQY3rc8KeGl3XQheN7aP4uoXDoJcZXfl5oIm9RLirlLTa34mgZa9QivJTZ3LVoPbKJzZaoOrJRvHK+KD9FadCzhT472Zl1rlxWTjDyU/f7y1BrQAAAAOHUrZjHPvV3pbNQPq62TZY0eC0cXnmASe4s2lrUu6qpU1v7DDr1dKi8XKWtqvHkPgtHBjeYJ4s9IsrWFrRjShwXWyErEWWwBTIQaniMXLQ2ym42yWbGdmct4/3Wn1qGvU2ZYOf1a98BWUfR8WdDSel9zX2qGMNkdyg8vHz5XA6pDwdzL07ynp1XwltB9G73HOa1ZbZcbHGtQtgtjrWIGwGx0N6EOSNssdov74GCGuJcwbhIBvHat+x1twWxX4dJj3WnqT2qXHoLNBPHUMD4pGvbxyCulpVoVY5hLKMecJQeJIeHBSghpCAkICQgYSEDCQgsDoSEGkICQgJCBgJCEns3JCOBfdLLfaQ5gk5eo5oYznvPAKtUuqcN2cs0rLSri6ecYj0v8Au8ye/wB4rb3WGeueDjIjjb4kY6B7eP2KFVXJ5Z3FjZ0bSnsU163zs5Lhgq5TkaKCVmLHArERCgrEQWbNq4ovcmitO57cPqHOmPl4eYBULiW1M8+12v4W9lj8O759eRGmtv5aGKtjb4Ufgv8Aon71zus2+3T8LHiuwWkXGzJ0nwfaVJrVyrZvtjrWoGwGx1rUGQGx1rULYDY4GoWwMjsL5InZie5h6WnCOnWqU3mDwRzjGaxJHRhvdfEBmRsgHzmrTp65eQ3Zz60U5WVCXM0SWaQ1GPCgiPYSFbjyjqr7UF195E9OhzSY4NI3fog/efcpPrL+1/LuA8WrzurvFe+Q/on+79yf6y/tfy7heLf1dXeD3yH9E/3fuS+sv7X8u4Xi39XV3he+Q/of+79yX1l/a6+4Xi39XV3he+Uj8zH737kvrL+119wvFn6+rvEnSgj8yH738Kf6yftfy7glpa8/q7xDtK3DhQj99+FP9Yn+X19wS0pP8fV3jMmlsw8SjYO2Qn1J/rBJ8IL3ki0iPPMhVGltxIIijp4x07JJHeUEtbrye5Jf31liGkUOdtnDuN4uVaCJ6uQt+azwR3BRSvq9XjL3GjQs6FH7EV7ThzM4oqcjUgyBKxaNKRZiyK9q0KUiZMaI3q/TYYArMRE+yW6S7XOnoos/lXgOI+S3nKlctmLZVvLmNtRlVfMb5Swsp6eOGJoayNoa0DmAWc3neeYTm5ycpcWCaFk0T4pW7THDBHSglFSjssaMnGW0jP7pbJLbVuicCY3b439I9q4jULOVtU/S+DOptrqNeClz85Ha1ZryTtjrGoMgNjoagbAyLDUzYDYsNQ5GyHspZGyDZSyLIMJZFkGEsiyDCWRZBhNkWQi1PkfIhzUSYSY05qNMNMYkajTJEyNI1Spk0WRZWqeEiaLIczVdhIsRZBnar9KRZgyHI1aNKRYTI7xgrSpSyiVMSrkRM1nV3o262UhuFazFZUDwWEb4mcw7Tx8yjrVNrcjg9c1JXVTwNN+RHrZdWqAwQ0hESuooq2AxTtyOY84PSoK9vCvDYqLKJaNadGW1EqFxtU9vedsbUJ8V4G7y9C4y/wBNq2ryt8ek3qF5CsuhkZjcLJZO5DzWoHkBsWGocg5FbKbI2QbKWRshYSHyBIQMJDgwkMHhIQRCWRZEEIshZGnhEmGmMPCkTJEyPIFImSpkaVqmiyeLIczVbpsniyDO1aFJlmDIMo3rQpyLMWMsglqJmw08b5ZXHDWMbknyLTpMOc4047U3hGk6F6De4XR194a19UN7IBvbEevpP2K1Kb5jjtW1x1s0bf7PO+nuL40YzuUZzYpIR//Z" alt="Instagram" class="social-icon">
+        </a>
+        <a href="https://www.linkedin.com/in/YourProfile" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" class="social-icon">
+        </a>
+    </div>
+</section>
+
+<footer>
+    <p>© 2024 YouTube Analysis Dashboard. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

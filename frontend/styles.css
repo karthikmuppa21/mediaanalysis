@@ -1,0 +1,292 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #333;
+}
+
+a {
+    color: #0056b3;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Home Section */
+#home {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+#home p {
+    font-size: 18px;
+    color: #333;
+}
+
+/* Analyze Comments Section */
+#analyze-comments {
+    padding: 40px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+#analyze-comments h1 {
+    text-align: center;
+    font-size: 28px; /* Optional: Adjust the font size as per your preference */
+    margin-bottom: 20px; /* Optional: Adjust the margin to control spacing */
+}
+
+
+.input-form {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#videoId, #apiKey {
+    padding: 10px;
+    margin: 5px;
+    font-size: 16px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#labels {
+    display: flex;
+    justify-content: space-around;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+.sentiment-labels {
+    display: flex;
+    justify-content: space-around;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+.sentiment-labels p {
+    background-color: #e0e0e0;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+}
+
+.sentiment-labels p strong {
+    color: #0056b3;
+}
+
+/* Charts Section */
+#charts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+canvas {
+    width: 80% !important;
+    height: 500px !important;
+    max-width: 800px;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* About Us Section */
+#about-us {
+    padding: 40px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+#about-us h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+#about-us p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+}
+
+#about-us ul {
+    padding-left: 20px;
+}
+
+#about-us ul li {
+    margin-bottom: 10px;
+}
+
+/* Need Help Section */
+#need-help {
+    padding: 40px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+#need-help h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+#need-help p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+}
+
+#need-help ol {
+    padding-left: 20px;
+}
+
+#need-help ol li {
+    margin-bottom: 10px;
+}
+
+/* Contact Us Section */
+#contact-us {
+    padding: 40px 20px;
+    background-color: #fff;
+    text-align: center;
+    border-top: 1px solid #ddd;
+}
+
+#contact-us h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+#contact-us p {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 15px 20px;
+    text-align: center;
+}
+
+footer p {
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Scroll Behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Contact Us Section */
+#contact-us {
+    padding: 40px 20px;
+    background-color: #fff;
+    text-align: center;
+    border-top: 1px solid #ddd;
+}
+
+#contact-us h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+#contact-us p {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Social Media Section */
+.social-media {
+    margin-top: 20px;
+}
+
+.social-media a {
+    margin: 0 10px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
